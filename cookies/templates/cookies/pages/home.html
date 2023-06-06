@@ -1,16 +1,25 @@
 {% include 'cookies/partials/head.html' %}
 
 <body>
-    <header class="main-header-container">
-        <div class="main-header container">
-            <h1>
-                <a class="main-logo" href="/">
-                    <i class="fas fa-cookie main-logo-icon"></i>
-                    <span class="main-logo-text">Cookies</span>
-                </a>
-            </h1>
+    {% include 'cookies/partials/header.html' %}
+    {% include 'cookies/partials/search.html' %}
+
+    <main class="main-content-container">
+        <div class="main-content main-content-list container">
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            {% include 'cookies/partials/recipe.html' %}
+            
         </div>
-    </header>
+    </main>
+
+    {% include 'cookies/partials/footer.html' %}
 </body>
 
 </html>
