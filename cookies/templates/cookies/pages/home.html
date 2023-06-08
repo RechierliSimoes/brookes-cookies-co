@@ -1,25 +1,9 @@
-{% include 'cookies/partials/head.html' %}
+{% extends 'global/base.html' %}
 
-<body>
-    {% include 'cookies/partials/header.html' %}
-    {% include 'cookies/partials/search.html' %}
-
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            {% include 'cookies/partials/recipe.html' %}
-            
-        </div>
-    </main>
-
-    {% include 'cookies/partials/footer.html' %}
-</body>
-
-</html>
+{% block content %}
+<div class="main-content main-content-list container">
+    {% for cookie in cookies %}
+        {% include 'cookies/partials/recipe.html' %}
+    {% endfor %}
+</div>
+{% endblock content %}

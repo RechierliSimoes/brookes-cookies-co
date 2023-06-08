@@ -1,6 +1,9 @@
 from django.urls import path
-from cookies.views import home
+from . import views
+
+app_name = 'cookies'
 
 urlpatterns = [
-    path('', home),
+    path('', views.home, name='home'),
+    path('cookies/<int:id>/', views.cookie, name='cookie'),
 ]
